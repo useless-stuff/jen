@@ -2,10 +2,14 @@ pipeline {
     agent any
     stages {
         stage("Checkout"){
-
+            steps{
+                sh "echo 'ciao'"
+            }
         }
         stage("Compile"){
-            sh "echo 'ciao'"
+            steps{
+                sh "echo 'ciao'"
+            }
         }
     }
 }
