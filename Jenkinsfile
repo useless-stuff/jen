@@ -7,6 +7,7 @@ pipeline {
           echo 'hello'
         }
 
+        sh 'docker ps'
       }
     }
 
