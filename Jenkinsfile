@@ -4,10 +4,9 @@ pipeline {
     stage('Build') {
       steps {
         ws(dir: '/workdir') {
-          echo 'hello'
+          echo 'hello $BUILD_NUMBER'
         }
 
-        sh 'docker ps'
       }
     }
 
@@ -25,7 +24,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('Validate terraform state') {
           steps {
             sh 'echo "Build ${BUILD_NUMBER}"'
           }
