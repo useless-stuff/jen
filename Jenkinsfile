@@ -11,5 +11,28 @@ pipeline {
       }
     }
 
+    stage('Tests') {
+      steps {
+        sh 'echo "Test!"'
+      }
+    }
+
+    stage('Deploy') {
+      parallel {
+        stage('Deploy') {
+          steps {
+            echo 'Deploy stage'
+          }
+        }
+
+        stage('') {
+          steps {
+            sh 'echo "Build ${BUILD_NUMBER}"'
+          }
+        }
+
+      }
+    }
+
   }
 }
