@@ -4,3 +4,4 @@ console.log(b)
 
 console.log("wow")
 console.log("su")
+console.log("red")
