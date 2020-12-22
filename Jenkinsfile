@@ -1,6 +1,13 @@
 pipeline {
   agent any
   stages {
+
+    stage("Checkout") {
+            steps {
+                git url: 'https://github.com/useless-stuff/jen.git'
+        }
+    }
+
     stage('Build') {
       steps {
         ws(dir: '/workdir') {
