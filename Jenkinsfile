@@ -23,6 +23,12 @@ pipeline {
       }
     }
 
+    stage('Pippo') {
+          steps {
+            sh 'echo "Pippo!"'
+          }
+    }
+
     stage('Deploy') {
       parallel {
         stage('Deploy') {
