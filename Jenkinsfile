@@ -105,12 +105,18 @@ pipeline {
           }
         }
 
-        stage('push to slack') {
-          steps {
-            echo 'push to slack'
-          }
-        }
+      }
+    }
 
+    stage('Semantic release') {
+      steps {
+        echo 'semantic release'
+      }
+    }
+
+    stage('Push to slack') {
+      steps {
+        echo 'push to slack'
       }
     }
 
