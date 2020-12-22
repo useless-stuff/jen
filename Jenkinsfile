@@ -53,7 +53,7 @@ pipeline {
           }
         }
 
-        stage('integratio tests') {
+        stage('integration tests') {
           steps {
             echo 'integration tests'
           }
@@ -70,13 +70,13 @@ pipeline {
           }
         }
 
-        stage('build ecs repo') {
+        stage('create ecs repos') {
           steps {
             echo 'ecs repo'
           }
         }
 
-        stage('containers') {
+        stage('push containers') {
           steps {
             echo 'push containers'
           }
@@ -93,7 +93,7 @@ pipeline {
           }
         }
 
-        stage('terraform state') {
+        stage('validate terraform state') {
           steps {
             sh 'echo "Build ${BUILD_NUMBER}"'
           }
