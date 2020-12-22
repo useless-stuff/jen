@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') {
-      steps {
-        git 'https://github.com/useless-stuff/jen.git'
-      }
-    }
 
     stage('Build') {
       parallel {
